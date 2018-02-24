@@ -1,0 +1,33 @@
+syntax = 'proto3';
+
+message LineRequest {
+    string line = 1;
+    string trainType = 2;
+}
+
+message LineInfo {
+    string trainType = 1;
+}
+
+message TrainPing {
+    string trainId = 1;
+    string route = 2;
+    string status = 3;
+    double speed = 4;
+    double nextStop = 5;
+    int32 minutesToNextStop = 6;
+    string line = 7;
+    string direction = 8;
+    string nextStation = 9;
+    int64 timestamp = 10;
+}
+
+message Empty {}
+
+service MasterService {
+ rpc ReceiveTrainPing (stream TrainPing) returns (Empty);
+}
+
+service CarService {
+    rpc SendTrainPing (stream TrainPing) returns (Empty);
+}

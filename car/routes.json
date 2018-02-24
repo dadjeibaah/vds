@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "lineName": "K",
+      "stops": [
+        {"name": "Overlook", "nextStop":300},
+        {"name":"Fordham", "nextStop":200},
+        {"name":"Devonshire","nextStop":500},
+        {"name":"Oklahoma","nextStop":300},
+        {"name":"Litteton","nextStop":100},
+        {"name":"Oak Valley","nextStop":600},
+        {"name":"Woodsman","nextStop":200},
+        {"name":"Brookings", "nextStop":300},
+        {"name":"Glenwood", "nextStop":1000},
+        {"name":"South Poplar", "nextStop":200}
+      ]
+    }
+  ]
+}
